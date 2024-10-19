@@ -1,4 +1,4 @@
-class APIManager {
+export default class APIManager {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
   }
@@ -25,6 +25,27 @@ class APIManager {
       console.log(error);
     }
   }
+
+  async sendPost(data) {
+    try {
+      console.log(data);
+      const response = fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          console.log("dato guardado por la API", json);
+          return json;
+        });
+      return "Nada";
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
 }
 
 const testAPIManager = new APIManager("https://jsonplaceholder.typicode.com");
@@ -36,4 +57,4 @@ const processPosts = async () => {
     });
   }
 };
-processPosts();
+// processPosts();

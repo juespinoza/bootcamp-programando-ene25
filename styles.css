@@ -105,3 +105,14 @@ img[title] {
 .contact-input {
   margin: 10px 0px;
 }
+
+
+div#habilidades {
+  text-align: left;
+}
+
+div#habilidades div {
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+}

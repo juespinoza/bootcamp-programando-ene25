@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Portfolio - Contacto</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script src="../script.js" defer></script>
+    <!-- <script src="../script.js" defer></script> -->
+    <script type="module" src="./scripts/contacto.js" defer></script>
   </head>
 
   <!-- Contenido de nuestra pagina -->
@@ -41,31 +42,47 @@
 
     <!-- Delimita el contenido dinamico de nuestra pagina -->
     <main>
-        <div class="contact-container">
-            <h3>Necesitas que te contacte?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula enim ac metus egestas ullamcorper. Etiam mattis gravida volutpat. Nullam volutpat neque in urna congue, ut tempor purus tincidunt. Donec ligula turpis, fringilla vel volutpat varius, commodo sit amet odio. </p>
-            <!-- 
+      <div class="contact-container">
+        <h3>Necesitas que te contacte?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          vehicula enim ac metus egestas ullamcorper. Etiam mattis gravida
+          volutpat. Nullam volutpat neque in urna congue, ut tempor purus
+          tincidunt. Donec ligula turpis, fringilla vel volutpat varius, commodo
+          sit amet odio.
+        </p>
+        <!-- 
                 - <form></form> 1er: Esta etiqueta delimita nuestro formulario (formulario de contacto)
                 - <label></label> 2do: titulo del dato a ingresar 
                 - <input></input> 2do: caja para ingresar de datos (textos, numeros, fecha, etc.)
               -->
-            <form id="contact-form" class="contact-form">
-                <div >
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="contact-input" />
-                </div>
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" class="contact-input"/>
-                </div>
-                <div>
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" id="telefono" name="telefono" class="contact-input" />
-                </div>
+        <form id="contact-form" class="contact-form">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="contact-input" />
+          </div>
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              class="contact-input"
+            />
+          </div>
 
-                <button type="submit" id="contact-submit">Enviar</button>
-            </form>
-        </div>
+          <button type="submit" id="contact-submit">Enviar</button>
+        </form>
+      </div>
     </main>
 
     <!-- Delimita el contenido del pie de nuestra pagina -->
